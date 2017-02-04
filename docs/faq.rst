@@ -225,6 +225,18 @@ If you've already moved your music *outside* of beets, you have a few options:
 - Delete your database and re-create it from the new paths using ``beet import -AWC``.
 - Resort to manually modifying the SQLite database (not recommended).
 
+…manage the same music in multiple file formats?
+-----
+
+Short answer: use ``$format`` in your paths config (:doc:`/reference/pathformat`), e.g.
+
+    paths:
+        default: "%lower{$format}/$albumartist/$album%aunique{}/$track $title"
+
+`$format` need not be at the beginning of the path or in lower case. This might
+be useful, for example, if you have flac files for archive and
+compressed mp3s for use on mobile devices. 
+
 
 Why does beets…
 ===============
